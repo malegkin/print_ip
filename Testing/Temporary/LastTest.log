@@ -1,10 +1,10 @@
-Start testing: Apr 21 23:32 UTC
+Start testing: Apr 21 23:50 UTC
 ----------------------------------------------------------
 1/1 Testing: test_foo
 1/1 Test: test_foo
 Command: "/home/travis/build/malegkin/print_ip/src/test_foo"
 Directory: /home/travis/build/malegkin/print_ip/src
-"test_foo" start time: Apr 21 23:32 UTC
+"test_foo" start time: Apr 21 23:50 UTC
 Output:
 ----------------------------------------------------------
 Running 1 test case...
@@ -19,7 +19,7 @@ Entering test case "test_block_allocator"
 /home/travis/build/malegkin/print_ip/src/test.cpp(18): info: check to_ip_string( vector<int>({1, 2, 3})) == "1..2..3" passed
 /home/travis/build/malegkin/print_ip/src/test.cpp(19): info: check to_ip_string( list<int>({1, 2, 3, 4})) == "1..2..3..4" passed
 /home/travis/build/malegkin/print_ip/src/test.cpp(20): info: check to_ip_string( make_tuple(1 , 2, 3, 4, 5 )) == "1..2..3..4..5" passed
-Leaving test case "test_block_allocator"; testing time: 153mks
+Leaving test case "test_block_allocator"; testing time: 152mks
 Leaving test suite "test_suite_main"
 Leaving test suite "test_foo"
 
@@ -28,8 +28,8 @@ Leaving test suite "test_foo"
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"test_foo" end time: Apr 21 23:32 UTC
+"test_foo" end time: Apr 21 23:50 UTC
 "test_foo" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Apr 21 23:32 UTC
+End testing: Apr 21 23:50 UTC
