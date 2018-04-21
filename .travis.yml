@@ -1,4 +1,16 @@
 language: cpp
+matrix:
+  include:
+    - os: linux
+      addons:
+            apt:
+                sources:
+                    - ubuntu-toolchain-r-test
+                packages:
+                    - g++-5
+                    - doxygen
+        script:
+            - make -j2 && HAVE_DOT=YES EXTRACT_ALL=YES doxygen Doxyfile
 
 before_script:
     - export _PROJECT_NAME=$(cat .project_name) 
