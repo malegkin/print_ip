@@ -26,7 +26,7 @@ template <typename T> struct is_container {
 };
 
 template <typename T>
-inline constexpr bool is_container_v = is_container<T>::value;
+constexpr bool is_container_v = is_container<T>::value;
 
 
 // tuple to vector
