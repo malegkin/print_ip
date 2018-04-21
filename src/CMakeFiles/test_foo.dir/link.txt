@@ -1,0 +1,1 @@
+/usr/bin/g++-7  -Wall -Wextra  -rdynamic CMakeFiles/test_foo.dir/test.cpp.o  -o test_foo -lboost_unit_test_framework libfoo.a 

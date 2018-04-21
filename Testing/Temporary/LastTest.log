@@ -1,0 +1,35 @@
+Start testing: Apr 21 23:32 UTC
+----------------------------------------------------------
+1/1 Testing: test_foo
+1/1 Test: test_foo
+Command: "/home/travis/build/malegkin/print_ip/src/test_foo"
+Directory: /home/travis/build/malegkin/print_ip/src
+"test_foo" start time: Apr 21 23:32 UTC
+Output:
+----------------------------------------------------------
+Running 1 test case...
+Entering test suite "test_foo"
+Entering test suite "test_suite_main"
+Entering test case "test_block_allocator"
+/home/travis/build/malegkin/print_ip/src/test.cpp(13): info: check to_ip_string( char(-1)) == "255" passed
+/home/travis/build/malegkin/print_ip/src/test.cpp(14): info: check to_ip_string( short(0)) == "0.0" passed
+/home/travis/build/malegkin/print_ip/src/test.cpp(15): info: check to_ip_string( int(2130706433)) == "127.0.0.1" passed
+/home/travis/build/malegkin/print_ip/src/test.cpp(16): info: check to_ip_string( long(8875824491850138409)) == "123.45.67.89.101.112.131.41" passed
+/home/travis/build/malegkin/print_ip/src/test.cpp(17): info: check to_ip_string( "8.8.8.8") == "8.8.8.8" passed
+/home/travis/build/malegkin/print_ip/src/test.cpp(18): info: check to_ip_string( vector<int>({1, 2, 3})) == "1..2..3" passed
+/home/travis/build/malegkin/print_ip/src/test.cpp(19): info: check to_ip_string( list<int>({1, 2, 3, 4})) == "1..2..3..4" passed
+/home/travis/build/malegkin/print_ip/src/test.cpp(20): info: check to_ip_string( make_tuple(1 , 2, 3, 4, 5 )) == "1..2..3..4..5" passed
+Leaving test case "test_block_allocator"; testing time: 153mks
+Leaving test suite "test_suite_main"
+Leaving test suite "test_foo"
+
+*** No errors detected
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"test_foo" end time: Apr 21 23:32 UTC
+"test_foo" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Apr 21 23:32 UTC

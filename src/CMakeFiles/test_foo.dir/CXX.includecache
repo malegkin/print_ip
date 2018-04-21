@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/travis/build/malegkin/print_ip/src/foo.h
+stdafx.h
+/home/travis/build/malegkin/print_ip/src/stdafx.h
+numeric
+-
+type_traits
+-
+list
+-
+vector
+-
+deque
+-
+array
+-
+
+/home/travis/build/malegkin/print_ip/src/stdafx.h
+iostream
+-
+string
+-
+vector
+-
+boost/format.hpp
+/home/travis/build/malegkin/print_ip/src/boost/format.hpp
+
+/home/travis/build/malegkin/print_ip/src/test.cpp
+stdafx.h
+/home/travis/build/malegkin/print_ip/src/stdafx.h
+boost/test/unit_test.hpp
+-
+foo.h
+/home/travis/build/malegkin/print_ip/src/foo.h
+
