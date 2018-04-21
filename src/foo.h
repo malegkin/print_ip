@@ -31,7 +31,7 @@ inline constexpr bool is_container_v = is_container<T>::value;
 
 // tuple to vector
 template <typename T, size_t N, typename Tuple, size_t... Id>
-constexpr decltype(auto) to_vector_impl(const Tuple& in, index_sequence<Id...>){
+constexpr vector<T> to_vector_impl(const Tuple& in, index_sequence<Id...>){
     return vector<T>{get<Id>(in)...};
 };
 
