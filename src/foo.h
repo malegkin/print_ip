@@ -22,7 +22,7 @@ IS_CONTAINER_IMPL(deque)
 IS_CONTAINER_IMPL(array)
 
 template <typename T> struct is_container {
-    static constexpr bool const value = is_container_impl<std::decay_t<T>>::value;
+    static constexpr bool const value = is_container_impl<typename decay<T>::type>::value;
 };
 
 template <typename T>
