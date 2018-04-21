@@ -24,10 +24,10 @@ IS_CONTAINER_IMPL(array)
 template <typename T> struct is_container {
     static constexpr bool const value = is_container_impl<typename decay<T>::type>::value;
 };
-
+/*
 template <typename T>
-constexpr bool is_container_v = is_container<T>::value;
-
+inline constexpr bool is_container_v = is_container<T>::value;
+*/
 
 // tuple to vector
 template <typename T, size_t N, typename Tuple, size_t... Id>
@@ -61,7 +61,7 @@ to_ip_string(const T& in)   {
 }
 
 template <typename T>
-typename enable_if<is_container_v<T>, string>::type
+typename enable_if<is_container<T>::value, string>::type
 to_ip_string(const T& in)   {
     if (in.size() == 0)
         return "";
