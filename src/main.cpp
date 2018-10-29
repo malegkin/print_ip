@@ -22,11 +22,10 @@ int main()
 
 
         dump( std::vector<std::list<uint32_t>>({{1,2},{3,4},{5,6}}) );
+
         auto v1 = std::vector<uint32_t>({1,2});
         auto v2 = std::vector<uint32_t>({3,4});
         auto v3 = std::vector<uint32_t>({5,6});
-
-
         dump( std::make_tuple(v1, v2, v3 ));
 
     }

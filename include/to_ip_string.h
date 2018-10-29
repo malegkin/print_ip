@@ -88,39 +88,3 @@ std::vector<std::string> to_vector(const std::tuple<>& in){
 }
 
 
-
-/*
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//to_ip_string
-std::string to_ip_string(const std::string in){
-    return in;
-}
-
-template <typename T>
-typename std::enable_if_t< std::is_integral_v< T >, std::string >
-to_ip_string( const T& in )   {
-    std::string out = std::to_string (in & 0xff);
-
-    for (size_t i = 1; i < sizeof(in); i++){
-        out = std::to_string((in >> i*8) & 0xff) + "." + out;
-    }
-    return out;
-};
-
-template <typename T>
-typename std::enable_if_t< is_container_v<T>, std::string >
-to_ip_string( const T& in)   {
-    if (in.size() == 0)
-        return "";
-
-    return accumulate(next(begin(in)), end(in),
-                      to_string(*(begin(in))),
-                      [](std::string out, auto a) { return out + "." + to_string(a); });
-};
-
-template <typename... T>
-std::string to_ip_string(const std::tuple<T...>& in){
-    return to_ip_string( to_vector(in) );
-}
-*/
-
