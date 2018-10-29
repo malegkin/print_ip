@@ -176,41 +176,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">//to_ip_string</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">std::string to_ip_string(const std::string in){</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">    return in;</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">}</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">template &lt;typename T&gt;</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">typename std::enable_if_t&lt; std::is_integral_v&lt; T &gt;, std::string &gt;</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">to_ip_string( const T&amp; in )   {</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">    std::string out = std::to_string (in &amp; 0xff);</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">    for (size_t i = 1; i &lt; sizeof(in); i++){</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">        out = std::to_string((in &gt;&gt; i*8) &amp; 0xff) + &quot;.&quot; + out;</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">    }</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">    return out;</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">};</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">template &lt;typename T&gt;</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">typename std::enable_if_t&lt; is_container_v&lt;T&gt;, std::string &gt;</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">to_ip_string( const T&amp; in)   {</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">    if (in.size() == 0)</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">        return &quot;&quot;;</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">    return accumulate(next(begin(in)), end(in),</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">                      to_string(*(begin(in))),</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">                      [](std::string out, auto a) { return out + &quot;.&quot; + to_string(a); });</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">};</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">template &lt;typename... T&gt;</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">std::string to_ip_string(const std::tuple&lt;T...&gt;&amp; in){</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">    return to_ip_string( to_vector(in) );</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">}</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
 <div class="ttc" id="traits_8h_html"><div class="ttname"><a href="traits_8h.html">traits.h</a></div></div>
 <div class="ttc" id="to__ip__string_8h_html_a0846716611bb72a3092bcefcea9ac5f6"><div class="ttname"><a href="to__ip__string_8h.html#a0846716611bb72a3092bcefcea9ac5f6">to_ip_string</a></div><div class="ttdeci">auto to_ip_string(const std::string in, bool is_top=true)</div><div class="ttdef"><b>Definition:</b> to_ip_string.h:15</div></div>
 <div class="ttc" id="stdafx_8h_html"><div class="ttname"><a href="stdafx_8h.html">stdafx.h</a></div></div>
