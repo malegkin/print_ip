@@ -64,15 +64,11 @@ CMAKE_BINARY_DIR = /home/travis/build/malegkin/print_ip
 
 # Convenience name for "all" pass in the directory.
 src/all: src/CMakeFiles/print_ip.dir/all
-src/all: src/CMakeFiles/test_foo.dir/all
-src/all: src/CMakeFiles/foo.dir/all
 
 .PHONY : src/all
 
 # Convenience name for "clean" pass in the directory.
 src/clean: src/CMakeFiles/print_ip.dir/clean
-src/clean: src/CMakeFiles/test_foo.dir/clean
-src/clean: src/CMakeFiles/foo.dir/clean
 
 .PHONY : src/clean
 
@@ -85,10 +81,10 @@ src/preinstall:
 # Target rules for target src/CMakeFiles/print_ip.dir
 
 # All Build rule for target.
-src/CMakeFiles/print_ip.dir/all: src/CMakeFiles/foo.dir/all
+src/CMakeFiles/print_ip.dir/all:
 	$(MAKE) -f src/CMakeFiles/print_ip.dir/build.make src/CMakeFiles/print_ip.dir/depend
 	$(MAKE) -f src/CMakeFiles/print_ip.dir/build.make src/CMakeFiles/print_ip.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/travis/build/malegkin/print_ip/CMakeFiles --progress-num=3,4 "Built target print_ip"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/travis/build/malegkin/print_ip/CMakeFiles --progress-num=1,2 "Built target print_ip"
 .PHONY : src/CMakeFiles/print_ip.dir/all
 
 # Include target in all.
@@ -98,7 +94,7 @@ all: src/CMakeFiles/print_ip.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/print_ip.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/travis/build/malegkin/print_ip/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/travis/build/malegkin/print_ip/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/print_ip.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/travis/build/malegkin/print_ip/CMakeFiles 0
 .PHONY : src/CMakeFiles/print_ip.dir/rule
@@ -119,76 +115,96 @@ clean: src/CMakeFiles/print_ip.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target src/CMakeFiles/test_foo.dir
+# Directory level rules for directory test
+
+# Convenience name for "all" pass in the directory.
+test/all: test/CMakeFiles/test_to_vector.dir/all
+test/all: test/CMakeFiles/test_to_ip_string.dir/all
+
+.PHONY : test/all
+
+# Convenience name for "clean" pass in the directory.
+test/clean: test/CMakeFiles/test_to_vector.dir/clean
+test/clean: test/CMakeFiles/test_to_ip_string.dir/clean
+
+.PHONY : test/clean
+
+# Convenience name for "preinstall" pass in the directory.
+test/preinstall:
+
+.PHONY : test/preinstall
+
+#=============================================================================
+# Target rules for target test/CMakeFiles/test_to_vector.dir
 
 # All Build rule for target.
-src/CMakeFiles/test_foo.dir/all: src/CMakeFiles/foo.dir/all
-	$(MAKE) -f src/CMakeFiles/test_foo.dir/build.make src/CMakeFiles/test_foo.dir/depend
-	$(MAKE) -f src/CMakeFiles/test_foo.dir/build.make src/CMakeFiles/test_foo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/travis/build/malegkin/print_ip/CMakeFiles --progress-num=5,6 "Built target test_foo"
-.PHONY : src/CMakeFiles/test_foo.dir/all
+test/CMakeFiles/test_to_vector.dir/all:
+	$(MAKE) -f test/CMakeFiles/test_to_vector.dir/build.make test/CMakeFiles/test_to_vector.dir/depend
+	$(MAKE) -f test/CMakeFiles/test_to_vector.dir/build.make test/CMakeFiles/test_to_vector.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/travis/build/malegkin/print_ip/CMakeFiles --progress-num=5,6 "Built target test_to_vector"
+.PHONY : test/CMakeFiles/test_to_vector.dir/all
 
 # Include target in all.
-all: src/CMakeFiles/test_foo.dir/all
+all: test/CMakeFiles/test_to_vector.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-src/CMakeFiles/test_foo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/travis/build/malegkin/print_ip/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/test_foo.dir/all
+test/CMakeFiles/test_to_vector.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/travis/build/malegkin/print_ip/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/test_to_vector.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/travis/build/malegkin/print_ip/CMakeFiles 0
-.PHONY : src/CMakeFiles/test_foo.dir/rule
+.PHONY : test/CMakeFiles/test_to_vector.dir/rule
 
 # Convenience name for target.
-test_foo: src/CMakeFiles/test_foo.dir/rule
+test_to_vector: test/CMakeFiles/test_to_vector.dir/rule
 
-.PHONY : test_foo
-
-# clean rule for target.
-src/CMakeFiles/test_foo.dir/clean:
-	$(MAKE) -f src/CMakeFiles/test_foo.dir/build.make src/CMakeFiles/test_foo.dir/clean
-.PHONY : src/CMakeFiles/test_foo.dir/clean
+.PHONY : test_to_vector
 
 # clean rule for target.
-clean: src/CMakeFiles/test_foo.dir/clean
+test/CMakeFiles/test_to_vector.dir/clean:
+	$(MAKE) -f test/CMakeFiles/test_to_vector.dir/build.make test/CMakeFiles/test_to_vector.dir/clean
+.PHONY : test/CMakeFiles/test_to_vector.dir/clean
+
+# clean rule for target.
+clean: test/CMakeFiles/test_to_vector.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target src/CMakeFiles/foo.dir
+# Target rules for target test/CMakeFiles/test_to_ip_string.dir
 
 # All Build rule for target.
-src/CMakeFiles/foo.dir/all:
-	$(MAKE) -f src/CMakeFiles/foo.dir/build.make src/CMakeFiles/foo.dir/depend
-	$(MAKE) -f src/CMakeFiles/foo.dir/build.make src/CMakeFiles/foo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/travis/build/malegkin/print_ip/CMakeFiles --progress-num=1,2 "Built target foo"
-.PHONY : src/CMakeFiles/foo.dir/all
+test/CMakeFiles/test_to_ip_string.dir/all:
+	$(MAKE) -f test/CMakeFiles/test_to_ip_string.dir/build.make test/CMakeFiles/test_to_ip_string.dir/depend
+	$(MAKE) -f test/CMakeFiles/test_to_ip_string.dir/build.make test/CMakeFiles/test_to_ip_string.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/travis/build/malegkin/print_ip/CMakeFiles --progress-num=3,4 "Built target test_to_ip_string"
+.PHONY : test/CMakeFiles/test_to_ip_string.dir/all
 
 # Include target in all.
-all: src/CMakeFiles/foo.dir/all
+all: test/CMakeFiles/test_to_ip_string.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-src/CMakeFiles/foo.dir/rule: cmake_check_build_system
+test/CMakeFiles/test_to_ip_string.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/travis/build/malegkin/print_ip/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/foo.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/test_to_ip_string.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/travis/build/malegkin/print_ip/CMakeFiles 0
-.PHONY : src/CMakeFiles/foo.dir/rule
+.PHONY : test/CMakeFiles/test_to_ip_string.dir/rule
 
 # Convenience name for target.
-foo: src/CMakeFiles/foo.dir/rule
+test_to_ip_string: test/CMakeFiles/test_to_ip_string.dir/rule
 
-.PHONY : foo
-
-# clean rule for target.
-src/CMakeFiles/foo.dir/clean:
-	$(MAKE) -f src/CMakeFiles/foo.dir/build.make src/CMakeFiles/foo.dir/clean
-.PHONY : src/CMakeFiles/foo.dir/clean
+.PHONY : test_to_ip_string
 
 # clean rule for target.
-clean: src/CMakeFiles/foo.dir/clean
+test/CMakeFiles/test_to_ip_string.dir/clean:
+	$(MAKE) -f test/CMakeFiles/test_to_ip_string.dir/build.make test/CMakeFiles/test_to_ip_string.dir/clean
+.PHONY : test/CMakeFiles/test_to_ip_string.dir/clean
+
+# clean rule for target.
+clean: test/CMakeFiles/test_to_ip_string.dir/clean
 
 .PHONY : clean
 

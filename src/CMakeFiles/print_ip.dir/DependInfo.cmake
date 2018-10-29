@@ -15,11 +15,11 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "include"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/travis/build/malegkin/print_ip/src/CMakeFiles/foo.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

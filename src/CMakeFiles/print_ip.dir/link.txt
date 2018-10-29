@@ -1,1 +1,1 @@
-/usr/bin/g++-7  -Wall -Wextra  -rdynamic CMakeFiles/print_ip.dir/main.cpp.o  -o print_ip -lboost_unit_test_framework libfoo.a 
+/usr/bin/g++-7  -Wall -Wextra -Wno-unused-parameter  -rdynamic CMakeFiles/print_ip.dir/main.cpp.o  -o print_ip -lboost_unit_test_framework 

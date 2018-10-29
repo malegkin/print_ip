@@ -91,7 +91,6 @@ print_ip_EXTERNAL_OBJECTS =
 src/print_ip: src/CMakeFiles/print_ip.dir/main.cpp.o
 src/print_ip: src/CMakeFiles/print_ip.dir/build.make
 src/print_ip: /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so
-src/print_ip: src/libfoo.a
 src/print_ip: src/CMakeFiles/print_ip.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/travis/build/malegkin/print_ip/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable print_ip"
 	cd /home/travis/build/malegkin/print_ip/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/print_ip.dir/link.txt --verbose=$(VERBOSE)

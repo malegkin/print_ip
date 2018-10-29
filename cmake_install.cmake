@@ -35,6 +35,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/travis/build/malegkin/print_ip/src/cmake_install.cmake")
+  include("/home/travis/build/malegkin/print_ip/test/cmake_install.cmake")
   include("/home/travis/build/malegkin/print_ip/deb/cmake_install.cmake")
 
 endif()

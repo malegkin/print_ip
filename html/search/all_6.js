@@ -5,5 +5,6 @@ var searchData=
   ['info_5flanguage_5fdialect_5fdefault',['info_language_dialect_default',['../_c_make_c_compiler_id_8c.html#a1ce162bad2fe6966ac8b33cc19e120b8',1,'info_language_dialect_default():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a1ce162bad2fe6966ac8b33cc19e120b8',1,'info_language_dialect_default():&#160;CMakeCXXCompilerId.cpp']]],
   ['info_5fplatform',['info_platform',['../_c_make_c_compiler_id_8c.html#a2321403dee54ee23f0c2fa849c60f7d4',1,'info_platform():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a2321403dee54ee23f0c2fa849c60f7d4',1,'info_platform():&#160;CMakeCXXCompilerId.cpp']]],
   ['is_5fcontainer',['is_container',['../structis__container.html',1,'']]],
-  ['is_5fcontainer_5fimpl',['is_container_impl',['../structis__container__impl.html',1,'is_container_impl&lt; T &gt;'],['../foo_8h.html#ad2bc6929d445210ac2bd32d007c38565',1,'IS_CONTAINER_IMPL():&#160;foo.h']]]
+  ['is_5fcontainer_5fhelper',['is_container_helper',['../structis__container__helper.html',1,'']]],
+  ['is_5fcontainer_5fv',['is_container_v',['../traits_8h.html#afd5235ab6d17ce521e2312cc80a317f9',1,'traits.h']]]
 ];

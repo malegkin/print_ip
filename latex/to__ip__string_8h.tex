@@ -1,0 +1,117 @@
+\hypertarget{to__ip__string_8h}{\section{include/to\-\_\-ip\-\_\-string.h File Reference}
+\label{to__ip__string_8h}\index{include/to\-\_\-ip\-\_\-string.\-h@{include/to\-\_\-ip\-\_\-string.\-h}}
+}
+{\ttfamily \#include \char`\"{}stdafx.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}traits.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+{\ttfamily \#include $<$numeric$>$}\\*
+Include dependency graph for to\-\_\-ip\-\_\-string.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{to__ip__string_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{to__ip__string_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename... T\-T$>$ }\\auto \hyperlink{to__ip__string_8h_a69f33ca1a20142e96a5cef2cb96c11ea}{to\-\_\-vector} (const std\-::tuple$<$ T, T\-T...$>$ \&in)
+\item 
+auto \hyperlink{to__ip__string_8h_a0846716611bb72a3092bcefcea9ac5f6}{to\-\_\-ip\-\_\-string} (const std\-::string in, bool is\-\_\-top=true)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\-\_\-t\\*
+$<$ \hyperlink{traits_8h_afd5235ab6d17ce521e2312cc80a317f9}{is\-\_\-container\-\_\-v}$<$ T $>$\\*
+ \&\&std\-::is\-\_\-same\-\_\-v$<$ typename \\*
+T\-::value\-\_\-type, std\-::string $>$\\*
+, std\-::string $>$ \hyperlink{to__ip__string_8h_aee52a715c042d3d454041021f267d035}{to\-\_\-ip\-\_\-string} (const T \&in, bool is\-\_\-top=true)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\-\_\-t\\*
+$<$ std\-::is\-\_\-integral\-\_\-v$<$ T $>$\\*
+, std\-::string $>$ \hyperlink{to__ip__string_8h_aa836169f7b430c6f32b67a950f04e476}{to\-\_\-ip\-\_\-string} (const T \&in, bool is\-\_\-top=true)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\-\_\-t\\*
+$<$ \hyperlink{traits_8h_afd5235ab6d17ce521e2312cc80a317f9}{is\-\_\-container\-\_\-v}$<$ T $>$\\*
+ \&\&!std\-::is\-\_\-same\-\_\-v$<$ typename \\*
+T\-::value\-\_\-type, std\-::string $>$\\*
+, std\-::string $>$ \hyperlink{to__ip__string_8h_a8b714168e352eeace458103a51a66dc8}{to\-\_\-ip\-\_\-string} (const T \&in, bool is\-\_\-top=true)
+\item 
+{\footnotesize template$<$typename... T$>$ }\\std\-::string \hyperlink{to__ip__string_8h_a4097b9037b4945c4a93c52fd46608486}{to\-\_\-ip\-\_\-string} (const std\-::tuple$<$ T...$>$ \&in, bool is\-\_\-top=true)
+\item 
+{\footnotesize template$<$typename T , typename Tuple , size\-\_\-t... Id$>$ }\\auto \hyperlink{to__ip__string_8h_a6f3ff16079c033a7dbc61506c1b87c90}{to\-\_\-vector\-\_\-impl} (const Tuple \&in, std\-::index\-\_\-sequence$<$ Id...$>$)
+\item 
+std\-::vector$<$ std\-::string $>$ \hyperlink{to__ip__string_8h_aabf6be604157bfb348556cea59d849fb}{to\-\_\-vector} (const std\-::tuple$<$$>$ \&in)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{to__ip__string_8h_a0846716611bb72a3092bcefcea9ac5f6}{\index{to\-\_\-ip\-\_\-string.\-h@{to\-\_\-ip\-\_\-string.\-h}!to\-\_\-ip\-\_\-string@{to\-\_\-ip\-\_\-string}}
+\index{to\-\_\-ip\-\_\-string@{to\-\_\-ip\-\_\-string}!to_ip_string.h@{to\-\_\-ip\-\_\-string.\-h}}
+\subsubsection[{to\-\_\-ip\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}auto to\-\_\-ip\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{const std\-::string}]{in, }
+\item[{bool}]{is\-\_\-top = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{to__ip__string_8h_a0846716611bb72a3092bcefcea9ac5f6}
+\hypertarget{to__ip__string_8h_aee52a715c042d3d454041021f267d035}{\index{to\-\_\-ip\-\_\-string.\-h@{to\-\_\-ip\-\_\-string.\-h}!to\-\_\-ip\-\_\-string@{to\-\_\-ip\-\_\-string}}
+\index{to\-\_\-ip\-\_\-string@{to\-\_\-ip\-\_\-string}!to_ip_string.h@{to\-\_\-ip\-\_\-string.\-h}}
+\subsubsection[{to\-\_\-ip\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::enable\-\_\-if\-\_\-t$<$ {\bf is\-\_\-container\-\_\-v}$<$T$>$ \&\& std\-::is\-\_\-same\-\_\-v$<$typename T\-::value\-\_\-type, std\-::string$>$, std\-::string $>$ to\-\_\-ip\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{in, }
+\item[{bool}]{is\-\_\-top = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{to__ip__string_8h_aee52a715c042d3d454041021f267d035}
+\hypertarget{to__ip__string_8h_aa836169f7b430c6f32b67a950f04e476}{\index{to\-\_\-ip\-\_\-string.\-h@{to\-\_\-ip\-\_\-string.\-h}!to\-\_\-ip\-\_\-string@{to\-\_\-ip\-\_\-string}}
+\index{to\-\_\-ip\-\_\-string@{to\-\_\-ip\-\_\-string}!to_ip_string.h@{to\-\_\-ip\-\_\-string.\-h}}
+\subsubsection[{to\-\_\-ip\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::enable\-\_\-if\-\_\-t$<$std\-::is\-\_\-integral\-\_\-v$<$T$>$, std\-::string $>$ to\-\_\-ip\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{in, }
+\item[{bool}]{is\-\_\-top = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{to__ip__string_8h_aa836169f7b430c6f32b67a950f04e476}
+\hypertarget{to__ip__string_8h_a8b714168e352eeace458103a51a66dc8}{\index{to\-\_\-ip\-\_\-string.\-h@{to\-\_\-ip\-\_\-string.\-h}!to\-\_\-ip\-\_\-string@{to\-\_\-ip\-\_\-string}}
+\index{to\-\_\-ip\-\_\-string@{to\-\_\-ip\-\_\-string}!to_ip_string.h@{to\-\_\-ip\-\_\-string.\-h}}
+\subsubsection[{to\-\_\-ip\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::enable\-\_\-if\-\_\-t$<${\bf is\-\_\-container\-\_\-v}$<$T$>$ \&\& !std\-::is\-\_\-same\-\_\-v$<$typename T\-::value\-\_\-type, std\-::string$>$, std\-::string $>$ to\-\_\-ip\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{in, }
+\item[{bool}]{is\-\_\-top = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{to__ip__string_8h_a8b714168e352eeace458103a51a66dc8}
+\hypertarget{to__ip__string_8h_a4097b9037b4945c4a93c52fd46608486}{\index{to\-\_\-ip\-\_\-string.\-h@{to\-\_\-ip\-\_\-string.\-h}!to\-\_\-ip\-\_\-string@{to\-\_\-ip\-\_\-string}}
+\index{to\-\_\-ip\-\_\-string@{to\-\_\-ip\-\_\-string}!to_ip_string.h@{to\-\_\-ip\-\_\-string.\-h}}
+\subsubsection[{to\-\_\-ip\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... T$>$ std\-::string to\-\_\-ip\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{const std\-::tuple$<$ T...$>$ \&}]{in, }
+\item[{bool}]{is\-\_\-top = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{to__ip__string_8h_a4097b9037b4945c4a93c52fd46608486}
+\hypertarget{to__ip__string_8h_a69f33ca1a20142e96a5cef2cb96c11ea}{\index{to\-\_\-ip\-\_\-string.\-h@{to\-\_\-ip\-\_\-string.\-h}!to\-\_\-vector@{to\-\_\-vector}}
+\index{to\-\_\-vector@{to\-\_\-vector}!to_ip_string.h@{to\-\_\-ip\-\_\-string.\-h}}
+\subsubsection[{to\-\_\-vector}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename... T\-T$>$ auto to\-\_\-vector (
+\begin{DoxyParamCaption}
+\item[{const std\-::tuple$<$ T, T\-T...$>$ \&}]{in}
+\end{DoxyParamCaption}
+)}}\label{to__ip__string_8h_a69f33ca1a20142e96a5cef2cb96c11ea}
+\hypertarget{to__ip__string_8h_aabf6be604157bfb348556cea59d849fb}{\index{to\-\_\-ip\-\_\-string.\-h@{to\-\_\-ip\-\_\-string.\-h}!to\-\_\-vector@{to\-\_\-vector}}
+\index{to\-\_\-vector@{to\-\_\-vector}!to_ip_string.h@{to\-\_\-ip\-\_\-string.\-h}}
+\subsubsection[{to\-\_\-vector}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::string$>$ to\-\_\-vector (
+\begin{DoxyParamCaption}
+\item[{const std\-::tuple$<$$>$ \&}]{in}
+\end{DoxyParamCaption}
+)}}\label{to__ip__string_8h_aabf6be604157bfb348556cea59d849fb}
+\hypertarget{to__ip__string_8h_a6f3ff16079c033a7dbc61506c1b87c90}{\index{to\-\_\-ip\-\_\-string.\-h@{to\-\_\-ip\-\_\-string.\-h}!to\-\_\-vector\-\_\-impl@{to\-\_\-vector\-\_\-impl}}
+\index{to\-\_\-vector\-\_\-impl@{to\-\_\-vector\-\_\-impl}!to_ip_string.h@{to\-\_\-ip\-\_\-string.\-h}}
+\subsubsection[{to\-\_\-vector\-\_\-impl}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename Tuple , size\-\_\-t... Id$>$ auto to\-\_\-vector\-\_\-impl (
+\begin{DoxyParamCaption}
+\item[{const Tuple \&}]{in, }
+\item[{std\-::index\-\_\-sequence$<$ Id...$>$}]{}
+\end{DoxyParamCaption}
+)}}\label{to__ip__string_8h_a6f3ff16079c033a7dbc61506c1b87c90}

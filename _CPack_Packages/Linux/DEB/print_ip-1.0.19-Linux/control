@@ -1,0 +1,10 @@
+Package: print_ip
+Version: 1.0.19
+Section: devel
+Priority: optional
+Architecture: amd64
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:3.0), libstdc++6 (>= 4.9)
+Installed-Size: 171
+Maintainer: malegkin@gmail.com
+Description: print_ip built using CMake
+

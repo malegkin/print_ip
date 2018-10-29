@@ -203,30 +203,30 @@ print_ip/fast:
 .PHONY : print_ip/fast
 
 #=============================================================================
-# Target rules for targets named test_foo
+# Target rules for targets named test_to_vector
 
 # Build rule for target.
-test_foo: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_foo
-.PHONY : test_foo
+test_to_vector: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_to_vector
+.PHONY : test_to_vector
 
 # fast build rule for target.
-test_foo/fast:
-	$(MAKE) -f src/CMakeFiles/test_foo.dir/build.make src/CMakeFiles/test_foo.dir/build
-.PHONY : test_foo/fast
+test_to_vector/fast:
+	$(MAKE) -f test/CMakeFiles/test_to_vector.dir/build.make test/CMakeFiles/test_to_vector.dir/build
+.PHONY : test_to_vector/fast
 
 #=============================================================================
-# Target rules for targets named foo
+# Target rules for targets named test_to_ip_string
 
 # Build rule for target.
-foo: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 foo
-.PHONY : foo
+test_to_ip_string: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_to_ip_string
+.PHONY : test_to_ip_string
 
 # fast build rule for target.
-foo/fast:
-	$(MAKE) -f src/CMakeFiles/foo.dir/build.make src/CMakeFiles/foo.dir/build
-.PHONY : foo/fast
+test_to_ip_string/fast:
+	$(MAKE) -f test/CMakeFiles/test_to_ip_string.dir/build.make test/CMakeFiles/test_to_ip_string.dir/build
+.PHONY : test_to_ip_string/fast
 
 # Help Target
 help:
@@ -244,8 +244,8 @@ help:
 	@echo "... package"
 	@echo "... test"
 	@echo "... print_ip"
-	@echo "... test_foo"
-	@echo "... foo"
+	@echo "... test_to_vector"
+	@echo "... test_to_ip_string"
 .PHONY : help
 
 

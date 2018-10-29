@@ -56,6 +56,18 @@ CMAKE_BINARY_DIR = /home/travis/build/malegkin/print_ip
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/local/cmake-3.9.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/local/cmake-3.9.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -67,6 +79,61 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/local/cmake-3.9.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/cmake-3.9.2/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/cmake-3.9.2/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/local/cmake-3.9.2/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/local/cmake-3.9.2/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	cd /home/travis/build/malegkin/print_ip && /usr/local/cmake-3.9.2/bin/cpack --config ./CPackSourceConfig.cmake /home/travis/build/malegkin/print_ip/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+
+.PHONY : package_source/fast
 
 # Special rule for the target package
 package: preinstall
@@ -89,73 +156,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/local/cmake-3.9.2/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/cmake-3.9.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/cmake-3.9.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/cmake-3.9.2/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/cmake-3.9.2/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/travis/build/malegkin/print_ip && /usr/local/cmake-3.9.2/bin/cpack --config ./CPackSourceConfig.cmake /home/travis/build/malegkin/print_ip/CPackSourceConfig.cmake
-.PHONY : package_source
-
-# Special rule for the target package_source
-package_source/fast: package_source
-
-.PHONY : package_source/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/cmake-3.9.2/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -204,63 +204,6 @@ print_ip/fast:
 	cd /home/travis/build/malegkin/print_ip && $(MAKE) -f src/CMakeFiles/print_ip.dir/build.make src/CMakeFiles/print_ip.dir/build
 .PHONY : print_ip/fast
 
-# Convenience name for target.
-src/CMakeFiles/test_foo.dir/rule:
-	cd /home/travis/build/malegkin/print_ip && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/test_foo.dir/rule
-.PHONY : src/CMakeFiles/test_foo.dir/rule
-
-# Convenience name for target.
-test_foo: src/CMakeFiles/test_foo.dir/rule
-
-.PHONY : test_foo
-
-# fast build rule for target.
-test_foo/fast:
-	cd /home/travis/build/malegkin/print_ip && $(MAKE) -f src/CMakeFiles/test_foo.dir/build.make src/CMakeFiles/test_foo.dir/build
-.PHONY : test_foo/fast
-
-# Convenience name for target.
-src/CMakeFiles/foo.dir/rule:
-	cd /home/travis/build/malegkin/print_ip && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/foo.dir/rule
-.PHONY : src/CMakeFiles/foo.dir/rule
-
-# Convenience name for target.
-foo: src/CMakeFiles/foo.dir/rule
-
-.PHONY : foo
-
-# fast build rule for target.
-foo/fast:
-	cd /home/travis/build/malegkin/print_ip && $(MAKE) -f src/CMakeFiles/foo.dir/build.make src/CMakeFiles/foo.dir/build
-.PHONY : foo/fast
-
-foo.o: foo.cpp.o
-
-.PHONY : foo.o
-
-# target to build an object file
-foo.cpp.o:
-	cd /home/travis/build/malegkin/print_ip && $(MAKE) -f src/CMakeFiles/foo.dir/build.make src/CMakeFiles/foo.dir/foo.cpp.o
-.PHONY : foo.cpp.o
-
-foo.i: foo.cpp.i
-
-.PHONY : foo.i
-
-# target to preprocess a source file
-foo.cpp.i:
-	cd /home/travis/build/malegkin/print_ip && $(MAKE) -f src/CMakeFiles/foo.dir/build.make src/CMakeFiles/foo.dir/foo.cpp.i
-.PHONY : foo.cpp.i
-
-foo.s: foo.cpp.s
-
-.PHONY : foo.s
-
-# target to generate assembly for a file
-foo.cpp.s:
-	cd /home/travis/build/malegkin/print_ip && $(MAKE) -f src/CMakeFiles/foo.dir/build.make src/CMakeFiles/foo.dir/foo.cpp.s
-.PHONY : foo.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -288,60 +231,25 @@ main.cpp.s:
 	cd /home/travis/build/malegkin/print_ip && $(MAKE) -f src/CMakeFiles/print_ip.dir/build.make src/CMakeFiles/print_ip.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-test.o: test.cpp.o
-
-.PHONY : test.o
-
-# target to build an object file
-test.cpp.o:
-	cd /home/travis/build/malegkin/print_ip && $(MAKE) -f src/CMakeFiles/test_foo.dir/build.make src/CMakeFiles/test_foo.dir/test.cpp.o
-.PHONY : test.cpp.o
-
-test.i: test.cpp.i
-
-.PHONY : test.i
-
-# target to preprocess a source file
-test.cpp.i:
-	cd /home/travis/build/malegkin/print_ip && $(MAKE) -f src/CMakeFiles/test_foo.dir/build.make src/CMakeFiles/test_foo.dir/test.cpp.i
-.PHONY : test.cpp.i
-
-test.s: test.cpp.s
-
-.PHONY : test.s
-
-# target to generate assembly for a file
-test.cpp.s:
-	cd /home/travis/build/malegkin/print_ip && $(MAKE) -f src/CMakeFiles/test_foo.dir/build.make src/CMakeFiles/test_foo.dir/test.cpp.s
-.PHONY : test.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... install"
+	@echo "... list_install_components"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... print_ip"
+	@echo "... package_source"
 	@echo "... package"
 	@echo "... test"
-	@echo "... print_ip"
-	@echo "... edit_cache"
-	@echo "... test_foo"
-	@echo "... foo"
-	@echo "... install/strip"
-	@echo "... list_install_components"
-	@echo "... install"
-	@echo "... package_source"
-	@echo "... rebuild_cache"
-	@echo "... foo.o"
-	@echo "... foo.i"
-	@echo "... foo.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... test.o"
-	@echo "... test.i"
-	@echo "... test.s"
 .PHONY : help
 
 
